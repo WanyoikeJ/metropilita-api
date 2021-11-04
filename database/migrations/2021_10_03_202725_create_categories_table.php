@@ -20,7 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->boolean('status')->default(true);
             $table->boolean('childstatus')->default(true);
             $table->integer('order')->nullable();
-            $table->integer('parent_id')->unsigned()->index()->nullable();
+            $table->foreignId('parent_id')->unsigned()->index()->nullable();
             $table->text('banner')->nullable();
             $table->text('description')->nullable();
             $table->text('meta')->nullable();
