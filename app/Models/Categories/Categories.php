@@ -5,6 +5,7 @@ namespace App\Models\Categories;
 use App\Models\Branches\Branches;
 use App\Models\Downloads\Downloads;
 use App\Models\Faqs\Faqs;
+use App\Models\Photosgrouping\Photosgrouping;
 use App\Models\Servicecenters\Servicecenters;
 use App\Models\Services\Services;
 use App\Models\Traits\HasChildren;
@@ -77,5 +78,10 @@ class Categories extends Model
     public function downloads()
     {
         return $this->hasMany(Downloads::class);
+    }
+
+    public function photosgrouping()
+    {
+        return $this->hasMany(Photosgrouping::class);
     }
 }
